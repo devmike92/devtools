@@ -1,9 +1,6 @@
-// MARK:START*
 // CUSTOM CONFIG FILE FOR MY DARK VSCODE THEME VERSION. BASE THEME: GITHUB DARK DEFAULT.
 
 {
-  "explorer.confirmDelete": false,
-
   // MARK:MINIMAP CONFIG*
   "editor.minimap.scale": 3,
   "editor.minimap.side": "right",
@@ -89,17 +86,18 @@
     "panelTitle.activeBorder": "#0e59ba",
     "panel.background": "#070a0f",
 
-    "tab.activeBorderTop": "#0e59ba",
+    "tab.activeBorderTop": "#5dbbff",
     "tab.border": "#30363d",
     "tab.activeForeground": "#dddddd",
+    "tab.inactiveForeground": "#dddddd",
 
     "sideBarSectionHeader.foreground": "#cdcdcd",
     "sideBarSectionHeader.background": "#070a0f",
-    "sideBar.background": "#12161a", // FONDO DE BARRA ARCHIVOS LATERAL 0a0f15
-    "sideBarTitle.background": "#12161a", // TITULO EXPLORER
+    "sideBar.background": "#13161a", // FONDO DE BARRA ARCHIVOS LATERAL 0a0f15
+    "sideBarTitle.background": "#13161a", // TITULO EXPLORER
 
     "activityBar.activeBorder": "#0e59ba",
-    "activityBar.activeBackground": "#12161a",
+    "activityBar.activeBackground": "#13161a", // 12161a
     "activityBar.background": "#070a0f",
     "activityBar.foreground": "#dddddd",
     "activityBar.inactiveForeground": "#cdcdcd", /////
@@ -110,8 +108,11 @@
     "badge.foreground": "#ffffff",
     "badge.background": "#0e59ba",
     "dropdown.foreground": "#cdcdcd",
+    "settings.headerForeground": "#dddddd",
+    "breadcrumb.foreground": "#dddddd",
 
-    "settings.headerForeground": "#dddddd"
+    "list.inactiveSelectionForeground": "#dddddd",
+    "list.inactiveSelectionBackground": "#40474e"
   },
 
   // MARK:REMOTE SCONFIG *
@@ -122,12 +123,16 @@
   },
 
   // MARK:MISCELLANEOUS*
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "onFocusChange",
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "telemetry.telemetryLevel": "off",
   "mdb.sendTelemetry": false,
-  "diffEditor.maxFileSize": 0
+  "diffEditor.maxFileSize": 0,
+  "editor.snippetSuggestions": "bottom",
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 3,
+  "explorer.confirmDelete": true
 }
 
 // MARK:END*
