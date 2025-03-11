@@ -1,7 +1,7 @@
 // CUSTOM CONFIG FILE FOR MY DARK VSCODE THEME VERSION. BASE THEME: GITHUB DARK DEFAULT.
 
 {
-  // MARK:MINIMAP CONFIG*
+  // MARK:MINIMAP*
   "editor.minimap.scale": 3,
   "editor.minimap.side": "right",
   "editor.minimap.maxColumn": 60,
@@ -12,30 +12,42 @@
   "editor.minimap.showRegionSectionHeaders": true,
   "editor.minimap.markSectionHeaderRegex": "\\bMARK:\\s*(?<separator>-?)\\s*(?<label>[^*}]+)",
 
-  // MARK:EDITOR FONTS*
-  "editor.fontSize": 11,
+  // MARK:EDITOR*
+  "editor.fontSize": 14,
   "editor.fontFamily": "FiraCode Nerd Font Light",
   "editor.fontLigatures": true,
   "editor.fontWeight": "normal",
-
-  // MARK:CUSTOM EDITOR FONTS*
   "editor.formatOnSave": true,
   "editor.scrollbar.vertical": "visible",
   "editor.scrollbar.horizontal": "visible",
   "editor.mouseWheelZoom": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.lineHeight": 1.6,
+  "editor.snippetSuggestions": "bottom",
+  "editor.codeLens": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 3,
 
-  // MARK:TERMINAL CONFIG*
+  // MARK:DIFF EDITOR*
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.maxComputationTime": 30000,
+  "diffEditor.maxFileSize": 0,
+
+  // MARK:TERMINAL*
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font Light",
-  //"terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontWeight": "500",
   "terminal.integrated.fontLigatures.enabled": true,
-  "terminal.integrated.fontSize": 11,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.mouseWheelZoom": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.lineHeight": 1.1,
+  "terminal.integrated.minimumContrastRatio": 1,
+  "terminal.integrated.fontSize": 11,
+
+  // MARK:WORKBENCH*
   "workbench.tree.renderIndentGuides": "always",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.view.alwaysShowHeaderActions": true,
@@ -45,6 +57,23 @@
     "workbench.panel.output": true
   },
 
+  // MARK:REMOTE CONFIG*
+  "remote.SSH.remotePlatform": {
+    "192.168.8.157": "linux",
+    "devhost": "linux",
+    "bastionftb": "linux"
+  },
+
+  // MARK: MISC*
+  "files.autoSave": "onFocusChange",
+  "telemetry.telemetryLevel": "off",
+  "mdb.sendTelemetry": false,
+  "explorer.confirmDelete": true,
+  "window.commandCenter": false,
+  "window.confirmBeforeClose": "always",
+  "window.title": "${activeFolderLong}$",
+  "window.menuBarVisibility": "compact",
+
   // MARK:WORKSPACE COLOR*
   "workbench.colorCustomizations": {
     "foreground": "#cdcdcd",
@@ -52,7 +81,7 @@
     "editor.foreground": "#cdcdcd",
     "editorOverviewRuler.border": "#30363d",
 
-    "terminal.foreground": "#d3d3d3",
+    //"terminal.foreground": "#d3d3d3",
 
     "minimapSlider.background": "#1c439151",
     "minimapSlider.hoverBackground": "#1c43919e",
@@ -78,8 +107,6 @@
 
     "focusBorder": "#0e59ba",
 
-    "sideBar.foreground": "#dddddd",
-
     "statusBarItem.remoteBackground": "#070a0f",
     "statusBar.background": "#070a0f",
 
@@ -93,10 +120,11 @@
 
     "sideBarSectionHeader.foreground": "#cdcdcd",
     "sideBarSectionHeader.background": "#070a0f",
-    "sideBar.background": "#13161a", // FONDO DE BARRA ARCHIVOS LATERAL 0a0f15
-    "sideBarTitle.background": "#13161a", // TITULO EXPLORER
+    "sideBar.background": "#13161a",
+    "sideBarTitle.background": "#13161a",
+    "sideBar.foreground": "#dddddd",
 
-    "activityBar.activeBorder": "#0e59ba",
+    "activityBar.activeBorder": "#5dbbff",
     "activityBar.activeBackground": "#13161a", // 12161a
     "activityBar.background": "#070a0f",
     "activityBar.foreground": "#dddddd",
@@ -104,35 +132,20 @@
     "activityBarBadge.background": "#0e59ba",
     "activityBarBadge.foreground": "#dddddd",
 
-    "icon.foreground": "#dddddd",
     "badge.foreground": "#ffffff",
     "badge.background": "#0e59ba",
+
     "dropdown.foreground": "#cdcdcd",
+
     "settings.headerForeground": "#dddddd",
+
     "breadcrumb.foreground": "#dddddd",
+
+    "icon.foreground": "#dddddd",
 
     "list.inactiveSelectionForeground": "#dddddd",
     "list.inactiveSelectionBackground": "#40474e"
   },
-
-  // MARK:REMOTE SCONFIG *
-  "remote.SSH.remotePlatform": {
-    "192.168.8.157": "linux",
-    "devhost": "linux",
-    "bastionftb": "linux"
-  },
-
-  // MARK:MISCELLANEOUS*
-  "files.autoSave": "onFocusChange",
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "telemetry.telemetryLevel": "off",
-  "mdb.sendTelemetry": false,
-  "diffEditor.maxFileSize": 0,
-  "editor.snippetSuggestions": "bottom",
-  "editor.stickyScroll.enabled": true,
-  "editor.stickyScroll.maxLineCount": 3,
-  "explorer.confirmDelete": true
+  "editor.minimap.enabled": false
 }
-
 // MARK:END*
