@@ -98,7 +98,7 @@
             "{{ if .Error }}#910d0d{{ else }}#01933b{{ end }}"
           ],
           "trailing_diamond": "",
-          "template": " {{ if .Error }}❌ {{ .Code }} {{ else }}✔ {{ end }}",
+          "template": " {{ if .Error }}❌ <b>{{ .Code }} {{ else }}✔ {{ end }}",
           "properties": { "always_enabled": true }
         }
       ],
