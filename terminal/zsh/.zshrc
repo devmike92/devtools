@@ -1,5 +1,5 @@
 # Historial
-export HISTFILE=~/.zsh/zsh_hist
+export HISTFILE=~/.zsh/zsh_history
 HISTSIZE=10000
 HISTFILESIZE=10000
 
@@ -37,7 +37,7 @@ alias lsa="ls -a"
 alias lss="ls -la"
 alias lsd="ls -aR -1"
 alias cl="clear"
-alias commit="bash /home/devmike/Documents/bashScripts/gitMsgPerCommit.sh"
+alias commit="bash /home/devmike/Documents/projects/devtools/terminal/scripts/gitMsgPerCommit.sh"
 alias gt="git status"
 alias re="cd .."
 alias ho="cd ~"
@@ -53,12 +53,12 @@ alias reset="git reset --hard HEAD"
 alias reset-test="git reset --hard tests"
 alias reset-dev="git reset --hard dev"
 alias reset-master="git reset --hard master"
-alias fol-dev="cd ~/Documents/Projects/devtools"
-alias fol-pro="cd ~/Documents/Projects"
-alias scripts="cd ~/Documents/Projects/devtools/scripts"
+alias fol-dev="cd ~/Documents/projects/devtools"
+alias fol-pro="cd ~/Documents/projects"
+alias scripts="cd ~/Documents/projects/devtools/scripts"
 
 eval "$(ssh-agent -s)"  # Inicia el agente SSH
 ssh-add ~/.ssh/git  # Agrega la clave (o ~/.ssh/id_rsa si usaste RSA)
 
 # Tema de "Oh My Posh"
-eval "$(oh-my-posh init zsh --config ~/.ohmyposh/theme.omp.json)"
+eval "$(oh-my-posh init zsh --config /home/devmike/.cache/oh-my-posh/themes/theme.omp.json)"
