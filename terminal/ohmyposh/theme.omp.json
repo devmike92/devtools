@@ -31,7 +31,6 @@
           "trailing_diamond": "",
           "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }}💼<b>{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }}-{{.Version}}<b> "
         },
-
         {
           "background": "#459d02",
           "foreground": "#f2f2f3",
