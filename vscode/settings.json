@@ -13,28 +13,30 @@
   "editor.minimap.markSectionHeaderRegex": "\\bMARK:\\s*(?<separator>-?)\\s*(?<label>[^*}]+)",
 
   // MARK:EDITOR*
-  "editor.fontSize": 14,
-  "editor.fontFamily": "FiraCode Nerd Font Light",
+  "editor.fontSize": 13,
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
   "editor.fontLigatures": true,
-  "editor.fontWeight": "500",
+  //"editor.fontWeight": "500",
   "editor.formatOnSave": true,
   "editor.scrollbar.vertical": "visible",
   "editor.scrollbar.horizontal": "visible",
   "editor.mouseWheelZoom": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.lineHeight": 1.6,
+  "editor.lineHeight": 1.5,
   "editor.snippetSuggestions": "bottom",
   "editor.codeLens": false,
   "editor.stickyScroll.maxLineCount": 3,
 
   // MARK:TERMINAL*
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font Light",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "terminal.integrated.fontWeight": "400",
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.mouseWheelZoom": false,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.minimumContrastRatio": 1,
   "terminal.integrated.scrollback": 200000,
 
@@ -79,14 +81,14 @@
   // MARK:WORKSPACE COLOR*
   "workbench.colorCustomizations": {
     "foreground": "#cdcdcd",
-    "editor.background": "#070a0f",
+    "editor.background": "#13161a",
     "editor.foreground": "#cdcdcd",
     "editorOverviewRuler.border": "#30363d",
 
     "minimapSlider.background": "#1c439151",
     "minimapSlider.hoverBackground": "#1c43919e",
     "minimapSlider.activeBackground": "#1c439151",
-    "minimap.background": "#070a0f",
+    "minimap.background": "#13161a",
 
     "scrollbar.shadow": "#7d8590",
     "scrollbarSlider.background": "#4e5359",
@@ -146,10 +148,13 @@
     "list.inactiveSelectionForeground": "#dddddd",
     "list.inactiveSelectionBackground": "#40474e",
 
-    "terminal.foreground": "#d8d8d8",
-    "terminal.ansiBrightBlue": "#166ada"
+    "terminal.foreground": "#f9f9f9",
+    "terminal.ansiBrightBlue": "#166ada",
+    "terminal.background": "#13161a"
   },
-  "terminal.integrated.fontSize": 11,
-  "editor.stickyScroll.enabled": false
+
+  "editor.stickyScroll.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.external.linuxExec": "xfce4-terminal"
 }
 // MARK:END*
