@@ -33,8 +33,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Aliases
-alias ls="ls -NahCR | less"
-alias lf="ls -la"
+alias lsa="ls -a"
+alias lss="ls -la"
+alias lsd="ls -aR -1"
 alias cl="clear"
 alias commit="bash /home/devmike/Documents/bashScripts/gitMsgPerCommit.sh"
 alias gt="git status"
@@ -55,10 +56,6 @@ alias reset-master="git reset --hard master"
 alias fol-dev="cd ~/Documents/Projects/devtools"
 alias fol-pro="cd ~/Documents/Projects"
 alias scripts="cd ~/Documents/Projects/devtools/scripts"
-
-# Habilitar teclas de flechas para navegar en el historial
-bindkey "^[[1;5A" scroll-back
-bindkey "^[[1;5B" scroll-forward
 
 eval "$(ssh-agent -s)"  # Inicia el agente SSH
 ssh-add ~/.ssh/git  # Agrega la clave (o ~/.ssh/id_rsa si usaste RSA)
