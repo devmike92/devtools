@@ -16,7 +16,7 @@
   "editor.fontSize": 13,
   "editor.fontFamily": "FiraCode Nerd Font Mono",
   "editor.fontLigatures": true,
-  //"editor.fontWeight": "500",
+  "editor.fontWeight": "400",
   "editor.formatOnSave": true,
   "editor.scrollbar.vertical": "visible",
   "editor.scrollbar.horizontal": "visible",
@@ -25,12 +25,13 @@
   "editor.lineHeight": 1.5,
   "editor.snippetSuggestions": "bottom",
   "editor.codeLens": false,
+  "editor.stickyScroll.enabled": true,
   "editor.stickyScroll.maxLineCount": 3,
 
   // MARK:TERMINAL*
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.fontWeight": "500",
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.mouseWheelZoom": false,
@@ -39,6 +40,13 @@
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.minimumContrastRatio": 1,
   "terminal.integrated.scrollback": 200000,
+  "terminal.external.linuxExec": "xfce4-terminal",
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.enableVisualBell": true,
+  "terminal.integrated.smoothScrolling": true,
 
   // MARK:DIFF EDITOR*
   "diffEditor.experimental.showMoves": true,
@@ -67,16 +75,15 @@
   // MARK: MISC*
   "files.autoSave": "onFocusChange",
   "telemetry.telemetryLevel": "off",
-  "mdb.sendTelemetry": false,
+  "editor.experimental.treeSitterTelemetry": false,
   "explorer.confirmDelete": true,
   "window.commandCenter": false,
-  "window.confirmBeforeClose": "always",
   "window.title": "${activeFolderLong}$",
   "window.menuBarVisibility": "compact",
   "extensions.autoUpdate": false,
-  "update.enableWindowsBackgroundUpdates": false,
   "extensions.autoCheckUpdates": false,
   "git.optimisticUpdate": false,
+  "security.workspace.trust.untrustedFiles": "open",
 
   // MARK:WORKSPACE COLOR*
   "workbench.colorCustomizations": {
@@ -138,23 +145,13 @@
     "badge.background": "#0e59ba",
 
     "dropdown.foreground": "#cdcdcd",
-
     "settings.headerForeground": "#dddddd",
-
     "breadcrumb.foreground": "#dddddd",
-
     "icon.foreground": "#dddddd",
-
     "list.inactiveSelectionForeground": "#dddddd",
     "list.inactiveSelectionBackground": "#40474e",
-
-    "terminal.foreground": "#f9f9f9",
-    "terminal.ansiBrightBlue": "#166ada",
+    "terminal.foreground": "#cdcdcd",
     "terminal.background": "#13161a"
-  },
-
-  "editor.stickyScroll.enabled": false,
-  "security.workspace.trust.untrustedFiles": "open",
-  "terminal.external.linuxExec": "xfce4-terminal"
+  }
 }
 // MARK:END*
