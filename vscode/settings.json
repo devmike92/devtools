@@ -13,7 +13,7 @@
   "editor.minimap.markSectionHeaderRegex": "\\bMARK:\\s*(?<separator>-?)\\s*(?<label>[^*}]+)",
 
   // MARK:EDITOR*
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "editor.fontFamily": "FiraCode Nerd Font Mono",
   "editor.fontLigatures": true,
   "editor.fontWeight": "400",
@@ -27,17 +27,32 @@
   "editor.codeLens": false,
   "editor.stickyScroll.enabled": true,
   "editor.stickyScroll.maxLineCount": 3,
+  "editor.minimap.enabled": false,
+  "editor.hover.delay": 500,
+  "editor.hover.above": false,
+  "editor.renderLineHighlightOnlyWhenFocus": false,
+  "editor.renderLineHighlight": "all",
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.matchBrackets": "never",
+  "editor.lineNumbers": "on",
+  "editor.codeLensFontSize": 8,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.indentation": false,
+  "editor.guides.highlightActiveIndentation": true,
 
   // MARK:TERMINAL*
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.mouseWheelZoom": false,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.lineHeight": 1.2,
-  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontSize": 13,
   "terminal.integrated.minimumContrastRatio": 1,
   "terminal.integrated.scrollback": 200000,
   "terminal.external.linuxExec": "xfce4-terminal",
@@ -64,6 +79,7 @@
   "workbench.view.showQuietly": {
     "workbench.panel.output": true
   },
+  "workbench.tree.indent": 16,
 
   // MARK:REMOTE CONFIG*
   "remote.SSH.remotePlatform": {
@@ -74,6 +90,9 @@
 
   // MARK: MISC*
   "files.autoSave": "onFocusChange",
+  "files.associations": {
+    "*.omp.json": "json"
+  },
   "telemetry.telemetryLevel": "off",
   "editor.experimental.treeSitterTelemetry": false,
   "explorer.confirmDelete": true,
@@ -83,24 +102,38 @@
   "extensions.autoUpdate": false,
   "extensions.autoCheckUpdates": false,
   "git.optimisticUpdate": false,
+  "git.openRepositoryInParentFolders": "always",
   "security.workspace.trust.untrustedFiles": "open",
 
   // MARK:WORKSPACE COLOR*
   "workbench.colorCustomizations": {
+    "editor.guides.highlightActiveIndentation": false,
+    "editorBracketHighlight.foreground1": "#106ae1",
+    "editorBracketHighlight.foreground2": "#01a711",
+    "editorBracketHighlight.foreground3": "#ff8c00",
+    "editorBracketHighlight.foreground4": "#96e600",
+    "editorBracketHighlight.foreground5": "#24b0f6",
+    "editorBracketHighlight.foreground6": "#f7473b",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#adb8c5",
+    "editorGutter.background": "#13161a",
+
     "foreground": "#cdcdcd",
     "editor.background": "#13161a",
     "editor.foreground": "#cdcdcd",
-    "editorOverviewRuler.border": "#30363d",
+    "editor.lineHighlightBackground": "#2c3034",
 
     "minimapSlider.background": "#1c439151",
     "minimapSlider.hoverBackground": "#1c43919e",
     "minimapSlider.activeBackground": "#1c439151",
     "minimap.background": "#13161a",
 
-    "scrollbar.shadow": "#7d8590",
-    "scrollbarSlider.background": "#4e5359",
-    "scrollbarSlider.hoverBackground": "#7d8590",
-    "scrollbarSlider.activeBackground": "#4e5359",
+    "scrollbarSlider.background": "#636979", //
+    "scrollbarSlider.hoverBackground": "#9195a2", //
+    "scrollbarSlider.activeBackground": "#636979", //
+
+    "editorOverviewRuler.background": "#2c3034", //
+    "editorOverviewRuler.border": "#2e333a", //
+    "scrollbar.shadow": "#444853", //
 
     "statusBarItem.remoteForeground": "#eeeeee",
     "statusBar.foreground": "#eeeeee",
@@ -110,23 +143,28 @@
     "button.hoverBackground": "#0e59ba",
 
     "titleBar.activeForeground": "#eeeeee",
-    "titleBar.inactiveBackground": "#222930",
     "titleBar.inactiveForeground": "#eeeeee",
-    "titleBar.activeBackground": "#070a0f",
 
-    "focusBorder": "#0e59ba",
+    "titleBar.inactiveBackground": "#1e2329", //
+    "titleBar.activeBackground": "#13161a", //
+
+    "tab.border": "#070a0f",
+    "tab.activeBackground": "#13161a", //
+    "tab.activeBorder": "#333538", //
+    "tab.activeForeground": "#dddddd",
+    "tab.activeBorderTop": "#0c5dff", //
+    "tab.inactiveBackground": "#333538", //
+    "tab.inactiveForeground": "#dddddd",
+    "tab.unfocusedActiveBorder": "#333538", //
+    "tab.unfocusedActiveBorderTop": "#0c5dff", //
+    "tab.unfocusedActiveBackground": "#13161a", //
+
+    "focusBorder": "#0c5dff",
 
     "statusBarItem.remoteBackground": "#070a0f",
     "statusBar.background": "#070a0f",
-
-    "panelTitle.activeBorder": "#0e59ba",
+    "panelTitle.activeBorder": "#0c5dff",
     "panel.background": "#070a0f",
-
-    "tab.activeBorderTop": "#5dbbff",
-    "tab.border": "#30363d",
-    "tab.activeForeground": "#dddddd",
-    "tab.inactiveForeground": "#dddddd",
-
     "sideBarSectionHeader.foreground": "#cdcdcd",
     "sideBarSectionHeader.background": "#070a0f",
     "sideBar.background": "#13161a",
@@ -149,9 +187,25 @@
     "breadcrumb.foreground": "#dddddd",
     "icon.foreground": "#dddddd",
     "list.inactiveSelectionForeground": "#dddddd",
-    "list.inactiveSelectionBackground": "#40474e",
+    "list.inactiveSelectionBackground": "#2a3036",
     "terminal.foreground": "#cdcdcd",
-    "terminal.background": "#13161a"
-  }
+    "terminal.background": "#13161a",
+    "tree.indentGuidesStroke": "#0099ff",
+    "tree.inactiveIndentGuidesStroke": "#adb8c5"
+  },
+  "colorize.colorized_variables": ["CSS"],
+  "colorize.languages": ["javascript", "html", "css", "json"],
+  "colorize.include": [
+    "*.css",
+    "*.scss",
+    "*.sass",
+    "*.less",
+    "*.vue",
+    "*.js",
+    "*.ts",
+    "*.jsx",
+    "*.tsx",
+    "*.json"
+  ]
 }
 // MARK:END*
