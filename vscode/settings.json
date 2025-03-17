@@ -42,6 +42,7 @@
   "editor.guides.bracketPairsHorizontal": false,
   "editor.guides.indentation": false,
   "editor.guides.highlightActiveIndentation": true,
+  "editor.acceptSuggestionOnEnter": "off",
 
   // MARK:TERMINAL*
   "terminal.integrated.defaultProfile.linux": "zsh",
