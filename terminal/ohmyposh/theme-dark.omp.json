@@ -1,0 +1,131 @@
+{
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#053e85",
+          "foreground": "#dddddd",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "style": "diamond",
+          "template": "{{ if .SSHSession }} 🔒{{ end }}💻 {{ .HostName }}",
+          "type": "session"
+        },
+        {
+          "background": "#053e85",
+          "foreground": "#dddddd",
+          "trailing_diamond": "",
+          "style": "diamond",
+          "properties": {
+            "url": "https://icanhazip.com",
+            "http_timeout": 800
+          },
+          "template": "📡 {{ .IP }} ",
+          "type": "ipify"
+        },
+        {
+          "background": "#11502c",
+          "foreground": "#f2f2f3",
+          "style": "diamond",
+          "trailing_diamond": "",
+          "properties": {
+            "style": "full"
+          },
+          "template": " 📁 {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "type": "project",
+          "background": "#648000",
+          "foreground": "#f2f2f3",
+          "style": "diamond",
+          "trailing_diamond": "",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }}💼{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }}-{{.Version}} "
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "trailing_diamond": "",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "p:c-badge-text",
+          "background": "p:c-git-normal",
+          "background_templates": [
+            "{{ if gt .Ahead 0 }}p:c-git-ahead{{ end }}",
+            "{{ if gt .Behind 0 }}p:c-git-behind{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:c-git-ahead-behind{{ end }}",
+            "{{ if and (not .Working.Changed) (.Staging.Changed) }}p:c-git-staging{{ end }}",
+            "{{ if and (.Working.Changed) (.Staging.Changed) }}p:c-git-staging-working{{ end }}",
+            "{{ if .UpstreamGone }}p:c-git-upstream-gone{{ end }}",
+            "{{ if and (.Working.Changed) (not .Staging.Changed) }}p:c-git-working{{ end }}"
+          ],
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} 🖉 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} ✔ {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} 💾 {{ .StashCount }}{{ end }} ",
+          "properties": {
+            "branch_icon": "\uE0A0 ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": false,
+            "untracked_modes": {
+              "*": "no"
+            },
+            "source": "cli",
+            "mapped_branches": {
+              "master": "🚀master",
+              "dev": "🔨dev",
+              "tests": "🧪tests",
+              "qa": "🧪qa",
+              "main": "🚀main"
+            }
+          }
+        },
+        {
+          "background": "#05414d",
+          "foreground": "#f2f2f3",
+          "trailing_diamond": "",
+          "properties": { "style": "austin", "threshold": 0 },
+          "style": "diamond",
+          "template": "⏳{{ .FormattedMs }}\u2800",
+          "type": "executiontime"
+        },
+        {
+          "type": "status",
+          "style": "diamond",
+          "foreground": "#f2f2f3",
+          "background": "#01933b",
+          "background_templates": [
+            "{{ if .Error }}#a12717{{ else }}#01933b{{ end }}"
+          ],
+          "trailing_diamond": "",
+          "template": " {{ if .Error }}❌ {{ .Code }} {{ else }}✔ {{ end }}",
+          "properties": { "always_enabled": true }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#f2f2f3",
+          "style": "plain",
+          "template": " <#dddddd>{{ if eq .UserName \"root\" }}⚜️  {{ end }}{{ .UserName }} <#0a88c7>\u276f</><#2aadef>\u276f</> ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "palette": {
+    "c-git-ahead": "#a12717",
+    "c-git-behind": "#a12717",
+    "c-git-ahead-behind": "#a12717",
+    "c-git-normal": "#127187",
+    "c-git-staging": "#127187",
+    "c-git-staging-working": "#127187",
+    "c-git-upstream-gone": "#a12717",
+    "c-git-working": "#127187",
+    "c-badge-text": "#f2f2f3"
+  },
+  "version": 3
+}
