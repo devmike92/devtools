@@ -1,0 +1,123 @@
+
+    1- PASOS INSTALAR TERMINAL ZSH 
+
+# Verificar que el terminal usandose es bash
+echo $SHELL
+
+# Instalar Paquete zsh
+sudo apt install zsh -y
+
+# Verificar que se instaló
+zsh --version
+
+# Establecer zsh como shell predeterminado
+chsh -s $(which zsh)
+
+# Cerrar el terminal
+exit
+
+# Abrir terminal y correr el comando
+zsh
+
+# Instalar archivo de configuracion inicial eligiendo opcion "2"
+2
+
+    2- INSTALAR TEMA OH MY POSH
+
+# Instalar oh my posh
+sudo curl -s https://ohmyposh.dev/install.sh | bash
+
+# Reiniciar Server
+sudo reboot
+
+# Abrir terminal y ejecutar zsh, luego ejecutar echo $SHELL para verificar que este corriente zsh (/usr/bin/zsh), luego cerrar terminal.
+zsh
+
+# Abrir archivo de configuracion de zsh 
+code ~/.zshrc
+
+# Reemplazar contenido por el contenido de: https://github.com/devmike92/devtools/blob/master/terminal/zsh/.zshrc (botón copy raw)
+
+# Agregar al inicio del archivo la siguiente linea:
+export PATH=$PATH:/home/tuusuario/.local/bin
+
+# Reemplazar ultima linea por:
+eval "$(oh-my-posh init zsh)"
+
+# Guardar archivo zshrc
+
+# Abrir terminal y verificar que cambio el tema del terminal por el default naranja naranja azul. cerrar terminal.
+
+# crear archivo de tema en carpeta de temas de oh my posh y abrir 
+cd /home/tuusuario/.cache/oh-my-posh/themes
+code theme.omp.json
+
+# Copiar contenido de https://github.com/devmike92/devtools/blob/master/terminal/ohmyposh/theme-dark.omp.json , guardar y cerrar archivo theme.omp.json
+
+# abrir archivo zshrc y reemplazar ultima linea con 
+code ~/.zshrc
+eval "$(oh-my-posh init zsh --config /home/tuusuario/.cache/oh-my-posh/themes/theme.omp.json)"
+
+# Guardar y cerrar archivo zshrc y cerrar terminal. 
+
+# Abrir terminal y verificar cambio del Prompt.
+
+
+    3 - INSTALAR DIRCOLORS
+
+# Abrir terminal e ir a home
+cd ~
+# Crear archivo y reemplazar con contenido de repo: https://github.com/devmike92/devtools/blob/master/terminal/zsh/.dircolors (boton copy raw)
+code .dircolors
+# Guardar y cerrar archivo y cerrar terminal.
+
+    4 - INSTALAR FUENTE
+
+# Abrir terminal y ejecutar
+oh-my-posh font install firacode
+
+    5 - VSCODE
+
+## Tema Custom Dark VSCode + Ext
+
+# En extensiones buscar e instalar:
+- Github Theme by Github for VS Code
+- Material Icon Theme by Philippp Kief
+- Prettier
+- ESLint
+- Bracket Pair Colorization Toggler
+- Colorize
+
+# En boton Opciones/Manage vscode > Themes
+Color Theme: Github Dark Default
+Icon Theme: Material Icon Theme
+
+# Abrir archivo json de configuraciones de usuario VSCODE
+-ctrl+shift izq + p
+-open user settings json
+
+# Respaldar cualquier comando personalizado para agregar posteriormente.
+
+# Reemplazar con contenido de repo: https://github.com/devmike92/devtools/blob/master/vscode/settings.json
+
+# Agregar comandos respaldados y revisar/personalizar. 
+
+# Reiniciar vscode. 
+-ctrl+shift izq + p
+-reload window
+
+    ## EXTRA1: Abrir carpeta de temas y eliminar todos los demas (*omp.json)
+cd /home/tuusuario/.cache/oh-my-posh/themes
+code .
+
+    ## EXTRA2: Modificar aliases y nombre de archivo ssh git en archivo zshrc
+code .zshrc
+
+
+
+
+
+
+
+
+
