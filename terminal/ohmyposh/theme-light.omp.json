@@ -1,0 +1,169 @@
+{
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#0a88c7",
+          "foreground": "#f2f2f3",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "style": "diamond",
+          "template": "{{ if .SSHSession }} 🔒{{ end }}💻 <b>{{ .HostName }}<b> ",
+          "type": "session"
+        },
+        {
+          "background": "#4b7d00",
+          "foreground": "#f2f2f3",
+          "style": "diamond",
+          "trailing_diamond": "",
+          "properties": {
+            "style": "full"
+          },
+          "template": " 📁 <b>{{ .Path }}<b> ",
+          "type": "path"
+        },
+        {
+          "type": "project",
+          "background": "#5a2d8b",
+          "foreground": "#f2f2f3",
+          "style": "diamond",
+          "trailing_diamond": "",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }}💼<b>{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }}-{{.Version}}<b> "
+        },
+        {
+          "background": "#459d02",
+          "foreground": "#f2f2f3",
+          "trailing_diamond": "",
+          "style": "diamond",
+          "properties": {
+            "fetch_package_manager": true,
+            "npm_icon": " <#cc3a3a>\ue5fa</> ",
+            "yarn_icon": " <#348cba>\ue6a7</>"
+          },
+
+          "template": "  <b>{{ .Full }}<b> ",
+          "type": "node"
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "trailing_diamond": "",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "p:c-badge-text",
+          "background": "p:c-git-normal",
+          "background_templates": [
+            "{{ if gt .Ahead 0 }}p:c-git-ahead{{ end }}",
+            "{{ if gt .Behind 0 }}p:c-git-behind{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:c-git-ahead-behind{{ end }}",
+            "{{ if and (not .Working.Changed) (.Staging.Changed) }}p:c-git-staging{{ end }}",
+            "{{ if and (.Working.Changed) (.Staging.Changed) }}p:c-git-staging-working{{ end }}",
+            "{{ if .UpstreamGone }}p:c-git-upstream-gone{{ end }}",
+            "{{ if and (.Working.Changed) (not .Staging.Changed) }}p:c-git-working{{ end }}"
+          ],
+          "template": " <b>{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}<b> ",
+          "properties": {
+            "branch_icon": "\uE0A0 ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": false,
+            "untracked_modes": {
+              "*": "no"
+            },
+            "source": "cli",
+            "mapped_branches": {
+              "master": " 🚀master",
+              "dev": " 🔨dev",
+              "tests": " 🧪tests",
+              "qa*/": " 🧪tests"
+            }
+          }
+        },
+        {
+          "background": "#01a6af",
+          "foreground": "#ffffff",
+          "trailing_diamond": "",
+          "properties": { "style": "austin", "threshold": 0 },
+          "style": "diamond",
+          "template": " ⏳<b>{{ .FormattedMs }}<b>\u2800",
+          "type": "executiontime"
+        },
+        {
+          "type": "status",
+          "style": "diamond",
+          "foreground": "#ffffff",
+          "background": "#01933b",
+          "background_templates": [
+            "{{ if .Error }}#910d0d{{ else }}#01933b{{ end }}"
+          ],
+          "trailing_diamond": "",
+          "template": " {{ if .Error }}❌ <b>{{ .Code }} {{ else }}✔ {{ end }}",
+          "properties": { "always_enabled": true }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#ffe51f",
+          "foreground": "#383838",
+          "leading_diamond": "",
+          "style": "diamond",
+          "properties": {
+            "url": "https://icanhazip.com",
+            "http_timeout": 800
+          },
+          "template": "🌍 <b>{{ .IP }}</b> ",
+          "type": "ipify"
+        },
+        {
+          "background": "#688e00",
+          "foreground": "#ffffff",
+          "leading_diamond": "",
+          "style": "diamond",
+          "template": "⚙️  {{ .Name }} ",
+          "type": "shell"
+        },
+        {
+          "background": "#33658A",
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "leading_diamond": "\ue0b2",
+          "properties": { "time_format": "3:04 PM" },
+          "style": "diamond",
+          "template": "🕒 {{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#f2f2f3",
+          "style": "plain",
+          "template": " <#f2f2f3><b>{{ if eq .UserName \"root\" }}⚜️  {{ end }}{{ .UserName }}</b> <#0a88c7>\u276f</><#2aadef>\u276f</> ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "palette": {
+    "c-git-ahead": "#6EFFFF",
+    "c-git-behind": "#FFA06D",
+    "c-git-ahead-behind": "#C0CFFF",
+    "c-git-normal": "#fbde3d",
+    "c-git-staging": "#6efa61",
+    "c-git-staging-working": "#FFB2FF",
+    "c-git-upstream-gone": "#d64740",
+    "c-git-working": "#84FFFF",
+    "c-badge-text": "#100f0f"
+  },
+  "version": 3
+}
